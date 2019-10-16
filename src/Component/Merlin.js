@@ -8,12 +8,13 @@ import "./Merlin.css";
 
 class Merlin extends Component {
   state = {
-    role: 0,
+    role: 1,
     point: 0
   };
 
   changeRole = data => {
     this.setState({ role: data.role, point: data.point });
+    console.log("Role : " + this.state.role);
   };
 
   render() {
@@ -30,8 +31,12 @@ class Merlin extends Component {
               <section id="body" className="bodymainpage">
                 <div className="row">
                   <div className="col-md-10 offet-md-1">
-                    <div className="bodycontent fil">
-                      <Routes item="test" />
+                    <div className="bodycontent">
+                      <Routes
+                        item="test"
+                        role={this.state.role}
+                        changeRole={this.changeRole}
+                      />
                     </div>
                   </div>
                 </div>

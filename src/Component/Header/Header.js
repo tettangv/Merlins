@@ -5,7 +5,7 @@ import { nav } from "bootstrap";
 import $ from "jquery";
 // import NavLink from "react-bootstrap/NavLink";
 
-class HeaderTest extends Component {
+class Header extends Component {
   constructor(props) {
     super(props);
     this.toggle = this.toggle.bind(this);
@@ -73,6 +73,11 @@ class HeaderTest extends Component {
                   <NavLink to="/calculator">CALCULATOR</NavLink>
                 </div>
               </li>
+              <li className="nav-item active">
+                <div className="nav-link">
+                  <NavLink to="/logout">LOGOUT</NavLink>
+                </div>
+              </li>
             </ul>
           </div>
         </nav>
@@ -81,4 +86,4 @@ class HeaderTest extends Component {
   }
 }
 
-export default HeaderTest;
+export default Header;

@@ -4,6 +4,7 @@ import Home from "./Home/Home";
 import Admin from "./Admin/Admin";
 import Calculator from "./Calculator/Calculator";
 import PageNotFound from "./PageNotFound/PageNotFound";
+import Logout from "./Logout";
 
 class Routes extends Component {
   render() {
@@ -16,6 +17,10 @@ class Routes extends Component {
         />
         <Route path="/admin" component={Admin} />
         <Route path="/calculator" component={Calculator} />
+        <Route
+          path="/logout"
+          component={() => <Logout changeRole={this.props.changeRole} />}
+        />
         <Route component={PageNotFound} />
       </Switch>
     );

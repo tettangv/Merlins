@@ -31,10 +31,11 @@
 }
 
 .bodymainpage {
-  /* display: inline-flex;
+  /* display: inline-flex; */
+  /*justify-content: center;*/
+  /* display: inline-flex; */
   justify-content: center;
-  display: inline-flex;
-  justify-content: center; */
+  /* justify-items: center; */
   background: whitesmoke;
   min-height: 86vh;
   border: solid #414142 2px;
@@ -44,10 +45,13 @@
 .bodycontent {
   margin-top: 30px;
   margin-bottom: 30px;
-  /* background-color: white(124, 124, 124); */
+  background-color: white(124, 124, 124);
   -webkit-box-shadow: 5px 5px 15px 5px rgba(50, 50, 50, 0.5);
   -moz-box-shadow: 5px 5px 15px 5px rgba(50, 50, 50, 0.5);
   box-shadow: 5px 5px 15px 5px rgba(50, 50, 50, 0.5);
+  min-width: 50%;
+  margin-left: 10%;
+  margin-right: 10px;
 }
 
 .fill {
