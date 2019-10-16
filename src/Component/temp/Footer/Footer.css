@@ -1,0 +1,30 @@
+div.page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+div.content-wrap {
+  padding-bottom: 2.5rem; /* Footer height */
+}
+
+.text {
+  color: purple;
+  font-size: 5px;
+}
+
+.footer_text {
+  color: "red";
+  size: "20px";
+}
+
+.footerpage {
+  display: inline-flex;
+  justify-content: center;
+  display: inline-flex;
+  justify-content: center;
+  background: black;
+  min-height: 30px;
+  /* border: solid #414142 1.5px; */
+  width: 100%;
+  top: 30%;
+}
