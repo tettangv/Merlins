@@ -23,6 +23,11 @@ class Header extends Component {
     });
   }
 
+  changeRole = data => {
+    this.setState({ role: data.role, point: data.point });
+    console.log("Role : " + this.state.role);
+  };
+
   componentDidUpdate = () => {
     if (this.state.role !== this.props.role) {
       this.setState({ role: this.props.role });
@@ -38,12 +43,14 @@ class Header extends Component {
       <div>
         <nav className="navbar navbar-expand-sm bg-dark navbar-dark">
           <div className="navbar-brand" style={styleMenu}>
-            <img
-              src="../assets/images/merlin2.png"
-              alt=""
-              width="200"
-              height="70"
-            />
+            <NavLink to="/">
+              <img
+                src="../assets/images/merlin2.png"
+                alt=""
+                width="200"
+                height="70"
+              />
+            </NavLink>
           </div>
           <button
             className="navbar-toggler"
@@ -63,11 +70,13 @@ class Header extends Component {
                   <NavLink to="/">HOME</NavLink>
                 </div>
               </li>
-              <li className="nav-item active">
-                <div className="nav-link">
-                  <NavLink to="/admin">ADMIN</NavLink>
-                </div>
-              </li>
+              {this.props.role == 3 ? (
+                <li className="nav-item active">
+                  <div className="nav-link">
+                    <NavLink to="/admin">ADMIN</NavLink>
+                  </div>
+                </li>
+              ) : null}
               <li className="nav-item active">
                 <div className="nav-link">
                   <NavLink to="/calculator">CALCULATOR</NavLink>
